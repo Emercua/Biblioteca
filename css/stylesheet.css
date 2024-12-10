@@ -45,7 +45,7 @@ header ul {
 }
 
 header ul li {
-    display: inline;
+  position: relative;
 }
 
 header ul li a {
@@ -60,6 +60,61 @@ header ul li a:hover {
     background-color: #d32f2f;
     color: white;
     border-radius: 5px;
+}
+
+
+/* Estilo del menú desplegable */
+
+/* Estilo del menú desplegable */
+.submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea columnas flexibles */
+  gap: 20px; /* Espaciado entre columnas */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo del menú */
+  border: 1px solid #ddd; /* Borde del menú */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el efecto flotante */
+  list-style: none; /* Eliminar los puntos de la lista */
+}
+
+/* Estilo de los elementos del menú */
+.submenu li {
+  margin: 0; /* Espaciado entre elementos */
+}
+
+.submenu li strong {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: block; /* Para separar títulos del resto */
+}
+
+/* Estilo de los enlaces */
+.submenu li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+  background-color: #ddd; /* Fondo al pasar el cursor */
+}
+
+
+/* Ocultar el submenú por defecto */
+header ul .dropdown .submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Coloca el menú debajo del enlace principal */
+  left: 0;
+  z-index: 1000; /* Asegura que se muestre sobre otros elementos */
+}
+
+/* Mostrar el submenú al pasar el mouse */
+header ul .dropdown:hover .submenu {
+  display: block;
 }
 
 
@@ -137,7 +192,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 20px;
 }
 
 footer div {
@@ -145,6 +200,21 @@ footer div {
     flex: 1;
     min-width: 200px;
 }
+
+footer div img {
+   width: 30%;
+  flex-wrap: wrap;
+    gap: 20px;
+}
+
+.insignia {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
 
 footer h2 {
     margin: 0 0 15px;
@@ -344,3 +414,33 @@ footer ul li a:hover {
     margin-top: 10px;
     font-weight: bold;
   }
+
+  /* proyectossssssssss */
+
+
+
+
+  .hero {
+
+    color: #333; 
+    padding: 40px 20px; 
+    text-align: center; 
+}
+
+.hero .container {
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem; 
+    line-height: 1.5;
+    color: #666; 
+}
+
